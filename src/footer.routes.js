@@ -29,7 +29,7 @@ export default {
     },
     {
       icon: <GitHubIcon />,
-      link: "https://github.com/creativetimofficial",
+      link: "https://github.com/william-monroy/plani",
     },
     {
       icon: <YouTubeIcon />,

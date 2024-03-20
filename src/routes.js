@@ -252,11 +252,7 @@ const routes = [
         description: "See our colors, icons and typography",
         href: "https://www.creative-tim.com/learning-lab/react/colors/material-kit/",
       },
-      {
-        name: "components",
-        description: "Explore our collection of fully designed components",
-        href: "https://www.creative-tim.com/learning-lab/react/alerts/material-kit/",
-      },
+
       {
         name: "plugins",
         description: "Check how you can integrate our plugins",
