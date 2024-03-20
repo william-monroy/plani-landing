@@ -33,8 +33,8 @@ function Counters() {
             <DefaultCounterCard
               count={70}
               suffix="+"
-              title="Coded Elements"
-              description="From buttons, to inputs, navbars, alerts or cards, you are covered"
+              title="Planes exitosos"
+              description="Desde ir a bucear con tiburones, a un concierto o ver una película"
             />
           </Grid>
           <Grid item xs={12} md={4} display="flex">
