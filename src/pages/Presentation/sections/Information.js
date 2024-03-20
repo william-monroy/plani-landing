@@ -25,10 +25,11 @@ import RotatingCard from "examples/Cards/RotatingCard";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
-
 // Images
 import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 import bgBack from "assets/images/rotating-card-bg-back.jpeg";
+
+import imagen from "./icon_amistad.png";
 
 function Information() {
   return (
@@ -65,17 +66,16 @@ function Information() {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="content_copy"
-                  title="Full Documentation"
-                  description="Built by developers for developers. Check the foundation and you will find
-                    everything inside our documentation."
+                  icon={<img src={imagen} alt="icon" style={{ width: "50px", height: "40x" }} />}
+                  title="Planta nuevas amistades"
+                  description="Unete a planes🔎 y descubre nuevas personas cerca de ti📌 con tus mismos gustos💯."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="flip_to_front"
-                  title="MUI Ready"
-                  description="The world's most popular react components library for building user interfaces."
+                  icon="./"
+                  title="¡Que no te dejen plantado!"
+                  description="La seguridad🔐 es lo mas importante, por eso tú puedes elegir quién puede unirse🫂 y a quién dejas plantado🪴"
                 />
               </Grid>
             </Grid>
@@ -83,15 +83,15 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   icon="price_change"
-                  title="Save Time & Money"
-                  description="Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System."
+                  title="Descubre nuevas aficiones"
+                  description="Únete a actividades que proponen otros usuarios🧍‍♀️ para descubrir nuevas aficiones😁 ¡Conocete y disfruta!"
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   icon="devices"
-                  title="Fully Responsive"
-                  description="Regardless of the screen size, the website content will naturally fit the given resolution."
+                  title="¡Sal a la calle!"
+                  description="Te animamos a que realices actividades al aire libre🍃 y contribuyas al medioambiente♻️ ¡Ayuda a nuestro planeta!🌏"
                 />
               </Grid>
             </Grid>

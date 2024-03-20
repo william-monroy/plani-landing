@@ -31,27 +31,27 @@ function Counters() {
         <Grid container item xs={12} lg={9} sx={{ mx: "auto" }}>
           <Grid item xs={12} md={4}>
             <DefaultCounterCard
-              count={70}
+              count={700}
               suffix="+"
               title="Planes exitosos"
-              description="Desde ir a bucear con tiburones, a un concierto o ver una película"
+              description="De cualquier tipo, desde ir a bucear con tiburones🦈, a un concierto🎶 o ver una película🎥"
             />
           </Grid>
           <Grid item xs={12} md={4} display="flex">
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, mx: 0 }} />
             <DefaultCounterCard
-              count={15}
+              count={500000}
               suffix="+"
-              title="Design Blocks"
-              description="Mix the sections, change the colors and unleash your creativity"
+              title="Usuarios satisfechos"
+              description="La aplicación ya cuenta con miles de usuarios satisfechos con la experiencia🤗 Te vas a quedar sin probarla?😠"
             />
             <Divider orientation="vertical" sx={{ display: { xs: "none", md: "block" }, ml: 0 }} />
           </Grid>
           <Grid item xs={12} md={4}>
             <DefaultCounterCard
-              count={4}
-              title="Pages"
-              description="Save 3-4 weeks of work when you use our pre-made pages for your website"
+              count={27}
+              title="Países"
+              description="Ya está disponible en 27 países, y seguimos creciendo🌍"
             />
           </Grid>
         </Grid>

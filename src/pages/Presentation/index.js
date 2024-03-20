@@ -84,7 +84,7 @@ function Presentation() {
                 },
               })}
             >
-              Plani{" "}
+              Bienvenidx a Plani{" "}
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -93,7 +93,17 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              La mejor aplicación del mundo
+              ¿Estás listo para que te dejen plantado?🌱
+            </MKTypography>
+            <MKTypography
+              variant="body1"
+              color="black"
+              textAlign="center"
+              px={{ xs: 6, lg: 12 }}
+              mt={1}
+              style={{ marginTop: 30, fontSize: 15 }}
+            >
+              Haz planes con tus amigos, conoce gente nueva, haz algo diferente🫂 Únete a Plani, harás esto y mucho más😎 Pero sobre todo... Que no te dejen plantado!🌳
             </MKTypography>
           </Grid>
         </Container>
