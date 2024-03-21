@@ -51,7 +51,7 @@ function Counters() {
             <DefaultCounterCard
               count={27}
               title="Países"
-              description="Ya está disponible en 27 países, y seguimos creciendo🌍"
+              description="Ya está disponible en 27 países e idiomas, y seguimos creciendo🌍"
             />
           </Grid>
         </Grid>
