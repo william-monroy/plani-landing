@@ -24,28 +24,31 @@ import MKBox from "components/MKBox";
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import CenteredBlogCard from "examples/Cards/BlogCards/CenteredBlogCard";
 
+// Images
+import bgImage from "assets/images/about_us_2.jfif";
+
 function Information() {
   return (
-    <MKBox component="section" py={12}>
+    <MKBox component="section" py={12} >
       <Container>
         <Grid container spacing={3} alignItems="center">
           <Grid item xs={12} lg={6}>
             <Grid container justifyContent="flex-start">
               <Grid item xs={12} md={6}>
-                <MKBox mb={5}>
+                <MKBox mb={5} >
                   <DefaultInfoCard
                     icon="public"
-                    title="Fully integrated"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    title="Muy Unidos"
+                    description="Nos apoyamos mutuamente unos a otros sin importar las circustancias"
                   />
                 </MKBox>
               </Grid>
               <Grid item xs={12} md={6}>
                 <MKBox mb={5}>
                   <DefaultInfoCard
-                    icon="payments"
-                    title="Payments functionality"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    icon="public"
+                    title="Día a día"
+                    description="Todos las semanas hacemos una reunion para ver como mejorar la aplicación y que va a hacer cada uno "
                   />
                 </MKBox>
               </Grid>
@@ -53,8 +56,8 @@ function Information() {
                 <MKBox mb={{ xs: 5, md: 0 }}>
                   <DefaultInfoCard
                     icon="apps"
-                    title="Prebuilt components"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    title="Aplicación de codigo abierto"
+                    description="Todas nuestras aplicaciónes son de codigo abierto, para ayudar a la comunidad"
                   />
                 </MKBox>
               </Grid>
@@ -62,8 +65,8 @@ function Information() {
                 <MKBox mb={{ xs: 5, md: 0 }}>
                   <DefaultInfoCard
                     icon="3p"
-                    title="Improved platform"
-                    description="We get insulted by others, lose trust for those We get back freezes"
+                    title="Escuchamos sugerencias"
+                    description="Intentamos escuchar los consejos de la comunidad para mejorar la aplicación"
                   />
                 </MKBox>
               </Grid>
@@ -71,14 +74,14 @@ function Information() {
           </Grid>
           <Grid item xs={12} lg={4} sx={{ ml: "auto", mt: { xs: 3, lg: 0 } }}>
             <CenteredBlogCard
-              image="https://images.unsplash.com/photo-1544717302-de2939b7ef71?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
-              title="Get insights on Search"
-              description="Website visitors today demand a frictionless user expericence — especially when using search. Because of the hight standards."
+              image = {bgImage}
+              title= "Entérate de por qué Plani es la mejor aplicación del mercado."
+              description=" Los que se prueban nuestra aplicación, dejan de buscar y echan raíces con nosotros"
               action={{
                 type: "internal",
                 route: "pages/company/about-us",
                 color: "info",
-                label: "find out more",
+                label: "Descubre más",
               }}
             />
           </Grid>
