@@ -46,7 +46,7 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <MKBox mb={5}>
                   <DefaultInfoCard
-                    icon="public"
+                    icon="DateRange"
                     title="Día a día"
                     description="Todos las semanas hacemos una reunion para ver como mejorar la aplicación y que va a hacer cada uno "
                   />
