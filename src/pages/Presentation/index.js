@@ -13,46 +13,82 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
+import React from "react";
+
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import Divider from "@mui/material/Divider";
 
 // Material Kit 2 React components
-import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
-import MKSocialButton from "components/MKSocialButton";
+import MKBox from "../../components/MKBox";
+import MKTypography from "../../components/MKTypography";
+import MKSocialButton from "../../components/MKSocialButton";
 
 // Material Kit 2 React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import DefaultFooter from "examples/Footers/DefaultFooter";
-import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
+import DefaultNavbar from "../../examples/Navbars/DefaultNavbar";
+import DefaultFooter from "../../examples/Footers/DefaultFooter";
+import FilledInfoCard from "../../examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
-import Counters from "pages/Presentation/sections/Counters";
-import Information from "pages/Presentation/sections/Information";
-import Testimonials from "pages/Presentation/sections/Testimonials";
-import Download from "pages/Presentation/sections/Download";
+import Counters from "../../pages/Presentation/sections/Counters";
+import Information from "../../pages/Presentation/sections/Information";
+// import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
+// import Pages from "pages/Presentation/sections/Pages";
+import Testimonials from "../../pages/Presentation/sections/Testimonials";
+import Download from "../../pages/Presentation/sections/Download";
 
 // Presentation page components
-import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
+// import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 
 // Routes
-import routes from "routes";
-import footerRoutes from "footer.routes";
+import routes from "../../routes";
+import footerRoutes from "../../footer.routes";
 
 // Images
 import bgImage from "assets/images/plan.jpg";
+import check from "assets/images/cheque.png";
+import cross from "assets/images/cerrar.png";
+
 
 function Presentation() {
+  function createData(
+    name: string,
+    plani: boolean,
+    meetup: boolean,
+    geokeda: boolean,
+    looplan: boolean,
+  ) {
+    return { name, plani, meetup, geokeda, looplan };
+  }
+
+  const rows = [
+    createData('Temática de planes ilimitada', true, true, false, true),
+    createData('Muestra planes según tus intereses', true, false, false, true),
+    createData('Valoración de los usuarios', true, false, false, false),
+    createData('Valoración de los planes', true, false, false, false),
+    createData('Planes privados para tus amigos', true, false, false, false),
+    createData('Chats con otros usuarios', true, false, false, true),
+    createData('Multiplataforma', true, true, false, false),
+    createData('Sin gastos integrados', true, false, true, false),
+  ];
+
   return (
     <>
       <DefaultNavbar
         routes={routes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          route: "Descargar Plani",
+          label: "Descárgala gratis",
           color: "info",
         }}
         sticky
@@ -63,7 +99,8 @@ function Presentation() {
         sx={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "top",
+          backgroundPosition: "center 20%",
+          opacity: 0.75,
           display: "grid",
           placeItems: "center",
         }}
@@ -82,7 +119,7 @@ function Presentation() {
                 },
               })}
             >
-              Plani{" "}
+              Bienvenidx a Plani{" "}
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -91,7 +128,17 @@ function Presentation() {
               px={{ xs: 6, lg: 12 }}
               mt={1}
             >
-              La mejor aplicación del mundo
+              ¿Estás listo para que te dejen plantado?🌱
+            </MKTypography>
+            <MKTypography
+              variant="body1"
+              color="black"
+              textAlign="center"
+              px={{ xs: 6, lg: 12 }}
+              mt={1}
+              style={{ marginTop: 30, fontSize: 15 }}
+            >
+              Haz planes con tus amigos, conoce gente nueva, haz algo diferente🫂 Únete a Plani, harás esto y mucho más😎 Pero sobre todo... Que no te dejen plantado!🌳
             </MKTypography>
           </Grid>
         </Container>
@@ -109,9 +156,55 @@ function Presentation() {
       >
         <Counters />
         <Information />
+        {/* <DesignBlocks />
+        <Pages />
         <Container sx={{ mt: 6 }}>
           <BuiltByDevelopers />
+        </Container> */}
+        <Container>
+          {/* tabla comparativa */}
+          <Grid
+            container
+            item
+            xs={12}
+            lg={6}
+            justifyContent="center"
+            marginBottom={4}
+            sx={{ mx: "auto", textAlign: "center" }}
+          >
+            <MKTypography variant="h2">¿Por qué somos mejores?</MKTypography>
+          </Grid>
+          <TableContainer component={Paper}>
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+              <TableHead sx={{ display: "table-header-group" }}>
+                <TableRow>
+                  <TableCell></TableCell>
+                  <TableCell>Plani</TableCell>
+                  <TableCell>MeetUp</TableCell>
+                  <TableCell>Geokeda</TableCell>
+                  <TableCell>LOOPLAN</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows.map((row) => (
+                  <TableRow
+                    key={row.name}
+                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                  >
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                    <TableCell>{row.plani ? <img src={check} alt="check" style={{ width: "30px", height: "30x" }}/> : <img src={cross} alt="cross" style={{ width: "25px", height: "25x" }}/>}</TableCell>
+                    <TableCell>{row.meetup ? <img src={check} alt="check" style={{ width: "30px", height: "30x" }}/> : <img src={cross} alt="cross" style={{ width: "25px", height: "25x" }}/>}</TableCell>
+                    <TableCell>{row.geokeda ? <img src={check} alt="check" style={{ width: "30px", height: "30x" }}/> : <img src={cross} alt="cross" style={{ width: "25px", height: "25x" }}/>}</TableCell>
+                    <TableCell>{row.looplan ? <img src={check} alt="check" style={{ width: "30px", height: "30x" }}/> : <img src={cross} alt="cross" style={{ width: "25px", height: "25x" }}/>}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
         </Container>
+        <Divider sx={{ my: 6 }} />
         <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>
@@ -163,10 +256,10 @@ function Presentation() {
             <Grid container spacing={3}>
               <Grid item xs={12} lg={5} ml="auto" sx={{ textAlign: { xs: "center", lg: "left" } }}>
                 <MKTypography variant="h4" fontWeight="bold" mb={0.5}>
-                  Thank you for your support!
+                  Gracias por tu apoyo!🧡
                 </MKTypography>
                 <MKTypography variant="body1" color="text">
-                  We deliver the best web products
+                  Estamos creando la mejor aplicación para ti
                 </MKTypography>
               </Grid>
               <Grid
@@ -179,7 +272,7 @@ function Presentation() {
               >
                 <MKSocialButton
                   component="a"
-                  href="https://twitter.com/intent/tweet?text=Check%20Material%20Design%20System%20made%20by%20%40CreativeTim%20%23webdesign%20%23designsystem%20%23mui5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-kit-react"
+                  href="https://twitter.com/intent/tweet?text=Conoce%20Plani%2C%20una%20aplicaci%C3%B3n%20para%20hacer%20planes%20distintos%20y%20conocer%20gente!%F0%9F%AB%82%20Hecha%20por%20%40plani%20%23redsocial%20%23amigos%20%23planes%20junto%20con%20la%20URL%20https%3A%2F%2Fplani-app.vercel.app%2F"
                   target="_blank"
                   color="twitter"
                   sx={{ mr: 1 }}
@@ -189,7 +282,7 @@ function Presentation() {
                 </MKSocialButton>
                 <MKSocialButton
                   component="a"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-kit-react"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://plani-app.vercel.app/"
                   target="_blank"
                   color="facebook"
                   sx={{ mr: 1 }}
@@ -199,7 +292,7 @@ function Presentation() {
                 </MKSocialButton>
                 <MKSocialButton
                   component="a"
-                  href="https://www.pinterest.com/pin/create/button/?url=https://www.creative-tim.com/product/material-kit-react"
+                  href="https://www.pinterest.com/pin/create/button/?url=https://plani-app.vercel.app/"
                   target="_blank"
                   color="pinterest"
                 >

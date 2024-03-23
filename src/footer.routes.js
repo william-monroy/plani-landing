@@ -8,7 +8,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import MKTypography from "components/MKTypography";
 
 // Images
-import logoCT from "assets/images/logo_plani.jpg";
+import logoCT from "assets/images/logo_plani.png";
 
 const date = new Date().getFullYear();
 
@@ -21,11 +21,11 @@ export default {
   socials: [
     {
       icon: <FacebookIcon />,
-      link: "https://www.facebook.com/CreativeTim/",
+      link: "https://www.facebook.com/plani/",
     },
     {
       icon: <TwitterIcon />,
-      link: "https://twitter.com/creativetim",
+      link: "https://twitter.com/plani",
     },
     {
       icon: <GitHubIcon />,
@@ -74,16 +74,16 @@ export default {
   ],
   copyright: (
     <MKTypography variant="button" fontWeight="regular">
-      All rights reserved. Copyright &copy; {date} Material Kit by{" "}
+      All rights reserved. Copyright &copy; {date} by {""}
       <MKTypography
         component="a"
-        href="https://www.creative-tim.com"
+        href="#"
         target="_blank"
         rel="noreferrer"
         variant="button"
         fontWeight="regular"
       >
-        Creative Tim
+        Plani
       </MKTypography>
       .
     </MKTypography>
