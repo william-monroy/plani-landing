@@ -41,13 +41,10 @@ import FilledInfoCard from "../../examples/Cards/InfoCards/FilledInfoCard";
 // Presentation page sections
 import Counters from "../../pages/Presentation/sections/Counters";
 import Information from "../../pages/Presentation/sections/Information";
-// import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
-// import Pages from "pages/Presentation/sections/Pages";
 import Testimonials from "../../pages/Presentation/sections/Testimonials";
 import Download from "../../pages/Presentation/sections/Download";
 
 // Presentation page components
-// import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 
 // Routes
 import routes from "../../routes";
@@ -127,6 +124,7 @@ function Presentation() {
               textAlign="center"
               px={{ xs: 6, lg: 12 }}
               mt={1}
+              style={{ fontWeight: 'bold' }}
             >
               ¿Estás listo para que te dejen plantado?🌱
             </MKTypography>
@@ -136,7 +134,7 @@ function Presentation() {
               textAlign="center"
               px={{ xs: 6, lg: 12 }}
               mt={1}
-              style={{ marginTop: 30, fontSize: 15 }}
+              style={{ marginTop: 30, fontSize: 15, fontWeight: 'bold' }}
             >
               Haz planes con tus amigos, conoce gente nueva, haz algo diferente🫂 Únete a Plani, harás esto y mucho más😎 Pero sobre todo... Que no te dejen plantado!🌳
             </MKTypography>
@@ -156,11 +154,6 @@ function Presentation() {
       >
         <Counters />
         <Information />
-        {/* <DesignBlocks />
-        <Pages />
-        <Container sx={{ mt: 6 }}>
-          <BuiltByDevelopers />
-        </Container> */}
         <Container>
           {/* tabla comparativa */}
           <Grid

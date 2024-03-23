@@ -50,11 +50,11 @@ function Download() {
         <Container sx={{ position: "relative", zIndex: 2, py: 12 }}>
           <Grid container item xs={12} md={7} justifyContent="center" mx="auto" textAlign="center">
             <MKTypography variant="h3" color="white">
-              ¿No te gustaría probar esta aplicación?
+              ¿Te gustaría probar esta aplicación?
             </MKTypography>
             <MKTypography variant="body2" color="white" mb={6}>
-              Porque si es así, puedes hacerlo GRATIS. Pulsa en el botón de abajo y
-              descárgala ya en la tienda de aplicaciónes que prefieras. Disponible para
+              Porque si es así, puedes hacerlo GRATIS. Pulsa en el botón y descárgala
+              ya en la tienda de aplicaciónes que prefieras. Disponible para
               todas las plataformas. Regístrate y empieza hacer planes.
             </MKTypography>
             <MKButton
