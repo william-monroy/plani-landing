@@ -13,6 +13,8 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
+// ESTA ES LA SECCIÓN DE DEBAJO CON LA TARJETA QUE SE MUEVE
+
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -42,21 +44,21 @@ function Information() {
                 icon="touch_app"
                 title={
                   <>
-                    Feel the
+                    ¿No tienes con
                     <br />
-                    Material Kit
+                    quien hacer planes?
                   </>
                 }
-                description="All the MUI components that you need in a development have been re-design with the new look."
+                description="¡Descargate Plani y empieza a hacer amigos!"
               />
               <RotatingCardBack
                 image={bgBack}
-                title="Discover More"
-                description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                title="Empieza a conocer gente"
+                description="Podrás conectar con muchas personas nuevas afines a ti y con las que hacer planes que nunca habias imaginado"
                 action={{
                   type: "internal",
-                  route: "/sections/page-sections/page-headers",
-                  label: "start with header",
+                  route: "https://play.google.com/store/games?hl=es_419&gl=US",
+                  label: "¡Descarga nuestra App!",
                 }}
               />
             </RotatingCard>
@@ -66,7 +68,7 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   icon="content_copy"
-                  title="Full Documentation"
+                  title="Info Plani 1"
                   description="Built by developers for developers. Check the foundation and you will find
                     everything inside our documentation."
                 />
@@ -74,7 +76,7 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   icon="flip_to_front"
-                  title="MUI Ready"
+                  title="Info Plani 2"
                   description="The world's most popular react components library for building user interfaces."
                 />
               </Grid>
@@ -83,14 +85,14 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   icon="price_change"
-                  title="Save Time & Money"
+                  title="Info Plani 3"
                   description="Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
                   icon="devices"
-                  title="Fully Responsive"
+                  title="Info Plani 4"
                   description="Regardless of the screen size, the website content will naturally fit the given resolution."
                 />
               </Grid>
