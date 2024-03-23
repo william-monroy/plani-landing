@@ -32,6 +32,7 @@ import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 import bgBack from "assets/images/rotating-card-bg-back.jpeg";
 
 import imagen from "./icon_amistad.png";
+import imagenHobby from "./hobby-icon.png";
 
 function Information() {
   return (
@@ -84,7 +85,7 @@ function Information() {
             <Grid container spacing={3} sx={{ mt: { xs: 0, md: 6 } }}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="price_change"
+                  icon={<img src={imagenHobby} alt="icon" style={{ width: "50px", height: "40x" }} />}
                   title="Descubre nuevas aficiones"
                   description="Únete a actividades que proponen otros usuarios🧍‍♀️ para descubrir nuevas aficiones😁 ¡Conocete y disfruta!"
                 />

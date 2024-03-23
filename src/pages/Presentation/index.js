@@ -36,7 +36,7 @@ import MKSocialButton from "../../components/MKSocialButton";
 // Material Kit 2 React examples
 import DefaultNavbar from "../../examples/Navbars/DefaultNavbar";
 import DefaultFooter from "../../examples/Footers/DefaultFooter";
-import FilledInfoCard from "../../examples/Cards/InfoCards/FilledInfoCard";
+// import FilledInfoCard from "../../examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
 import Counters from "../../pages/Presentation/sections/Counters";
@@ -154,6 +154,7 @@ function Presentation() {
       >
         <Counters />
         <Information />
+        <Divider sx={{ my: 6 }} />
         <Container>
           {/* tabla comparativa */}
           <Grid
@@ -198,7 +199,7 @@ function Presentation() {
           </TableContainer>
         </Container>
         <Divider sx={{ my: 6 }} />
-        <Container>
+        {/* <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>
               <FilledInfoCard
@@ -241,7 +242,7 @@ function Presentation() {
               />
             </Grid>
           </Grid>
-        </Container>
+        </Container> */}
         <Testimonials />
         <Download />
         <MKBox pt={18} pb={6}>
