@@ -31,8 +31,20 @@ import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
 import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 import bgBack from "assets/images/rotating-card-bg-back.jpeg";
 
+
+
+
+import imagen from "../../../assets/images/icons/icon_amistad.png";
+import imagenHobby from "../../../assets/images/icons/hobby-icon.png";
+import imagencalle from "../../../assets/images/icons/medioambiente.png";
+import imagenplantado from "../../../assets/images/icons/imagenplantado.png";
+
+/*
 import imagen from "./icon_amistad.png";
 import imagenHobby from "./hobby-icon.png";
+import imagencalle from "./medioambiente.png";
+import imagenplantado from "./imagenplantado.png";
+*/
 
 function Information() {
   return (
@@ -76,7 +88,7 @@ function Information() {
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="./"
+                  icon={<img src={imagenplantado} alt="icon" style={{ width: "45px", height: "40x" }} />}
                   title="¡Que no te dejen plantado!"
                   description="La seguridad🔐 es lo mas importante, por eso tú puedes elegir quién puede unirse🫂 y a quién dejas plantado🪴"
                 />
@@ -92,7 +104,7 @@ function Information() {
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="devices"
+                  icon={<img src={imagencalle} alt="icon" style={{ width: "45px", height: "40x" }} />}
                   title="¡Sal a la calle!"
                   description="Te animamos a que realices actividades al aire libre🍃 y contribuyas al medioambiente♻️ ¡Ayuda a nuestro planeta!🌏"
                 />

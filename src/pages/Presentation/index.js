@@ -43,6 +43,8 @@ import Counters from "../../pages/Presentation/sections/Counters";
 import Information from "../../pages/Presentation/sections/Information";
 import Testimonials from "../../pages/Presentation/sections/Testimonials";
 import Download from "../../pages/Presentation/sections/Download";
+import AppGallery from "../../pages/Presentation/sections/AppGallery";
+
 
 // Presentation page components
 
@@ -54,15 +56,36 @@ import footerRoutes from "../../footer.routes";
 import bgImage from "assets/images/plan.jpg";
 import check from "assets/images/cheque.png";
 import cross from "assets/images/cerrar.png";
+import testimg from "assets/images/screanshots/test.jpg"
+
+
+import RotatingCard from "examples/Cards/RotatingCard";
+import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
+import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
+//import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
+
+import bgFront from "assets/images/rotating-card-bg-front.jpeg";
+import bgBack from "assets/images/rotating-card-bg-back.jpeg";
+
+//Estas son las imagenes que apareceran en la seccion de capturas de la aplicacion
+const images = [
+  { url: testimg, alt: 'Descripción de la imagen 1' },
+  { url: testimg, alt: 'Descripción de la imagen 2' },
+  { url: testimg, alt: 'Descripción de la imagen 3' },
+  { url: testimg, alt: 'Descripción de la imagen 4' },
+  { url: testimg, alt: 'Descripción de la imagen 5' },
+  { url: testimg, alt: 'Descripción de la imagen 6' },
+  // Agrega más imágenes según sea necesario
+];
 
 
 function Presentation() {
   function createData(
-    name: string,
-    plani: boolean,
-    meetup: boolean,
-    geokeda: boolean,
-    looplan: boolean,
+    name,//: string,
+    plani,//: boolean,
+    meetup,//: boolean,
+    geokeda,//: boolean,
+    looplan//: boolean,
   ) {
     return { name, plani, meetup, geokeda, looplan };
   }
@@ -199,6 +222,86 @@ function Presentation() {
           </TableContainer>
         </Container>
         <Divider sx={{ my: 6 }} />
+        <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
+            <RotatingCard>
+              <RotatingCardFront
+                image={bgFront}
+                icon="touch_app"
+                title={
+                  <>
+                    ¿Que te ha
+                    <br />
+                    parecido el plan?
+                  </>
+                }
+                description=""
+              />
+              <RotatingCardBack
+                image={bgBack}
+                title="¡Pon una valoracion al plan!"
+                description="Te ofrecemos la posibilidad de que valores los planes que has realizado y asi ayudar a otros usuarios a encontrar los mejores planes."
+                action={{
+                  type: "internal",
+                  route: "https://play.google.com/store/games?hl=es_419&gl=US",
+                  label: "¡Descarga ya!",
+                }}
+              />
+            </RotatingCard>
+          </Grid>
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
+            <RotatingCard>
+              <RotatingCardFront
+                image={bgFront}
+                icon="touch_app"
+                title={
+                  <>
+                    ¿Quieres decubrir
+                    <br />
+                    nuevas aficiones?
+                  </>
+                }
+                description="¡Dejanos recomendarte!"
+              />
+              <RotatingCardBack
+                image={bgBack}
+                title="¡Descubre!"
+                description="Gracias a nuestro algoritmo que analiza los planes y opiniones de otros usuarios, te mostramos aquellos planes que creemos que creemos que te pueden gustar."
+                action={{
+                  type: "internal",
+                  route: "https://play.google.com/store/games?hl=es_419&gl=US",
+                  label: "¡Descarga ya!",
+                }}
+              />
+            </RotatingCard>
+          </Grid>
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
+            <RotatingCard>
+              <RotatingCardFront
+                image={bgFront}
+                icon="touch_app"
+                title={
+                  <>
+                    Tu eliges quien
+                    <br />
+                    puede unirse al plan
+                  </>
+                }
+                description=""
+              />
+              <RotatingCardBack
+                image={bgBack}
+                title="¡Tu eliges!"
+                description="Controla quien pued unirse al plan y quien no. Tu eres el dueño del plan y tu decides quien puede unirse y quien no."
+                action={{
+                  type: "internal",
+                  route: "https://play.google.com/store/games?hl=es_419&gl=US",
+                  label: "¡Descarga ya!",
+                }}
+              />
+            </RotatingCard>
+          </Grid>
+        </Grid>
         {/* <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>
@@ -244,6 +347,7 @@ function Presentation() {
           </Grid>
         </Container> */}
         <Testimonials />
+        <AppGallery images={images} />
         <Download />
         <MKBox pt={18} pb={6}>
           <Container>
