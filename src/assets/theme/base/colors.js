@@ -55,7 +55,7 @@ export default {
   },
 
   info: {
-    main: "#1A73E8",
+    main: "#FFA500",
     focus: "#1662C4",
   },
 
@@ -108,8 +108,8 @@ export default {
     },
 
     info: {
-      main: "#49a3f1",
-      state: "#1A73E8",
+      main: "#FFA500",
+      state: "#FFA500",
     },
 
     success: {
@@ -212,8 +212,8 @@ export default {
     },
 
     info: {
-      background: "#aecef7",
-      text: "#095bc6",
+      background: "#FFA500",
+      text: "#ffa500",
     },
 
     success: {
@@ -245,7 +245,7 @@ export default {
   coloredShadows: {
     primary: "#e91e62",
     secondary: "#110e0e",
-    info: "#00bbd4",
+    info: "#FFA500",
     success: "#4caf4f",
     warning: "#ff9900",
     error: "#f44336",
