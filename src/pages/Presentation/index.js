@@ -56,7 +56,13 @@ import footerRoutes from "../../footer.routes";
 import bgImage from "assets/images/plan.jpg";
 import check from "assets/images/cheque.png";
 import cross from "assets/images/cerrar.png";
-import testimg from "assets/images/screanshots/test.jpg"
+// import testimg from "assets/images/screanshots/test.jpg"
+import landingimg from "assets/images/screanshots/landing.png"
+import loginimg from "assets/images/screanshots/login.png"
+import registerimg from "assets/images/screanshots/registro.png"
+import plansimg from "assets/images/screanshots/planes.png"
+import planimg from "assets/images/screanshots/plan.png"
+
 
 
 import RotatingCard from "examples/Cards/RotatingCard";
@@ -69,12 +75,12 @@ import bgBack from "assets/images/rotating-card-bg-back.jpeg";
 
 //Estas son las imagenes que apareceran en la seccion de capturas de la aplicacion
 const images = [
-  { url: testimg, alt: 'Descripción de la imagen 1' },
-  { url: testimg, alt: 'Descripción de la imagen 2' },
-  { url: testimg, alt: 'Descripción de la imagen 3' },
-  { url: testimg, alt: 'Descripción de la imagen 4' },
-  { url: testimg, alt: 'Descripción de la imagen 5' },
-  { url: testimg, alt: 'Descripción de la imagen 6' },
+  { url: landingimg, alt: 'Ventana de Landing de la aplicación' },
+  { url: loginimg, alt: 'Ventana del inicio de sesión de la aplicación' },
+  { url: registerimg, alt: 'Ventana del registro de la aplicación' },
+  { url: plansimg, alt: 'Ventana de inicio con los planes' },
+  { url: planimg, alt: 'Ventana de información de un plan' },
+  // { url: testimg, alt: 'Descripción de la imagen 6' },
   // Agrega más imágenes según sea necesario
 ];
 
@@ -282,7 +288,7 @@ function Presentation() {
                 icon="touch_app"
                 title={
                   <>
-                    Tu eliges quien
+                    Tú eliges quién
                     <br />
                     puede unirse al plan
                   </>
@@ -291,8 +297,8 @@ function Presentation() {
               />
               <RotatingCardBack
                 image={bgBack}
-                title="¡Tu eliges!"
-                description="Controla quien pued unirse al plan y quien no. Tu eres el dueño del plan y tu decides quien puede unirse y quien no."
+                title="¡Tú eliges!"
+                description="Controla quién puede unirse al plan y quién no. Tú eres el dueño del plan y tú decides quién puede unirse y quién no."
                 action={{
                   type: "internal",
                   route: "https://play.google.com/store/games?hl=es_419&gl=US",
