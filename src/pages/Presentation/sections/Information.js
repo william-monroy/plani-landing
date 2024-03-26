@@ -13,6 +13,8 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
+// ESTA ES LA SECCIÓN DE DEBAJO CON LA TARJETA QUE SE MUEVE
+
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
@@ -25,10 +27,24 @@ import RotatingCard from "examples/Cards/RotatingCard";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
-
 // Images
 import bgFront from "assets/images/rotating-card-bg-front.jpeg";
 import bgBack from "assets/images/rotating-card-bg-back.jpeg";
+
+
+
+
+import imagen from "../../../assets/images/icons/icon_amistad.png";
+import imagenHobby from "../../../assets/images/icons/hobby-icon.png";
+import imagencalle from "../../../assets/images/icons/medioambiente.png";
+import imagenplantado from "../../../assets/images/icons/imagenplantado.png";
+
+/*
+import imagen from "./icon_amistad.png";
+import imagenHobby from "./hobby-icon.png";
+import imagencalle from "./medioambiente.png";
+import imagenplantado from "./imagenplantado.png";
+*/
 
 function Information() {
   return (
@@ -42,21 +58,21 @@ function Information() {
                 icon="touch_app"
                 title={
                   <>
-                    Feel the
+                    ¿No tienes con
                     <br />
-                    Material Kit
+                    quien hacer planes?
                   </>
                 }
-                description="All the MUI components that you need in a development have been re-design with the new look."
+                description="¡Descargate Plani y empieza a hacer amigos!"
               />
               <RotatingCardBack
                 image={bgBack}
-                title="Discover More"
-                description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                title="Empieza a conocer gente"
+                description="Podrás conectar con muchas personas nuevas afines a ti y con las que hacer planes que nunca habias imaginado"
                 action={{
                   type: "internal",
-                  route: "/sections/page-sections/page-headers",
-                  label: "start with header",
+                  route: "https://play.google.com/store/games?hl=es_419&gl=US",
+                  label: "¡Descarga nuestra App!",
                 }}
               />
             </RotatingCard>
@@ -65,33 +81,32 @@ function Information() {
             <Grid container spacing={3}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="content_copy"
-                  title="Full Documentation"
-                  description="Built by developers for developers. Check the foundation and you will find
-                    everything inside our documentation."
+                  icon={<img src={imagen} alt="icon" style={{ width: "50px", height: "40x" }} />}
+                  title="Planta nuevas amistades"
+                  description="Unete a planes🔎 y descubre nuevas personas cerca de ti📌 con tus mismos gustos💯."
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="flip_to_front"
-                  title="MUI Ready"
-                  description="The world's most popular react components library for building user interfaces."
+                  icon={<img src={imagenplantado} alt="icon" style={{ width: "45px", height: "40x" }} />}
+                  title="¡Que no te dejen plantado!"
+                  description="La seguridad🔐 es lo mas importante, por eso tú puedes elegir quién puede unirse🫂 y a quién dejas plantado🪴"
                 />
               </Grid>
             </Grid>
             <Grid container spacing={3} sx={{ mt: { xs: 0, md: 6 } }}>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="price_change"
-                  title="Save Time & Money"
-                  description="Creating your design from scratch with dedicated designers can be very expensive. Start with our Design System."
+                  icon={<img src={imagenHobby} alt="icon" style={{ width: "50px", height: "40x" }} />}
+                  title="Descubre nuevas aficiones"
+                  description="Únete a actividades que proponen otros usuarios🧍‍♀️ para descubrir nuevas aficiones😁 ¡Conocete y disfruta!"
                 />
               </Grid>
               <Grid item xs={12} md={6}>
                 <DefaultInfoCard
-                  icon="devices"
-                  title="Fully Responsive"
-                  description="Regardless of the screen size, the website content will naturally fit the given resolution."
+                  icon={<img src={imagencalle} alt="icon" style={{ width: "45px", height: "40x" }} />}
+                  title="¡Sal a la calle!"
+                  description="Te animamos a que realices actividades al aire libre🍃 y contribuyas al medioambiente♻️ ¡Ayuda a nuestro planeta!🌏"
                 />
               </Grid>
             </Grid>

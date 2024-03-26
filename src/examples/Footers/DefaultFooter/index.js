@@ -28,7 +28,7 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
 function DefaultFooter({ content }) {
-  const { brand, socials, menus, copyright } = content;
+  const { brand, socials, copyright } = content;
 
   return (
     <MKBox component="footer">
@@ -59,7 +59,7 @@ function DefaultFooter({ content }) {
               ))}
             </MKBox>
           </Grid>
-          {menus.map(({ name: title, items }) => (
+          {/* {menus.map(({ name: title, items }) => (
             <Grid key={title} item xs={6} md={2} sx={{ mb: 3 }}>
               <MKTypography
                 display="block"
@@ -100,7 +100,7 @@ function DefaultFooter({ content }) {
                 ))}
               </MKBox>
             </Grid>
-          ))}
+          ))} */}
           <Grid item xs={12} sx={{ textAlign: "center", my: 3 }}>
             {copyright}
           </Grid>

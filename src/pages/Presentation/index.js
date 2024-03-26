@@ -13,48 +13,108 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
+import React from "react";
+
 // @mui material components
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+import Divider from "@mui/material/Divider";
 
 // Material Kit 2 React components
-import MKBox from "components/MKBox";
-import MKTypography from "components/MKTypography";
-import MKSocialButton from "components/MKSocialButton";
+import MKBox from "../../components/MKBox";
+import MKTypography from "../../components/MKTypography";
+import MKSocialButton from "../../components/MKSocialButton";
 
 // Material Kit 2 React examples
-import DefaultNavbar from "examples/Navbars/DefaultNavbar";
-import DefaultFooter from "examples/Footers/DefaultFooter";
-import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
+import DefaultNavbar from "../../examples/Navbars/DefaultNavbar";
+import DefaultFooter from "../../examples/Footers/DefaultFooter";
+// import FilledInfoCard from "../../examples/Cards/InfoCards/FilledInfoCard";
 
 // Presentation page sections
-import Counters from "pages/Presentation/sections/Counters";
-import Information from "pages/Presentation/sections/Information";
-import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
-import Pages from "pages/Presentation/sections/Pages";
-import Testimonials from "pages/Presentation/sections/Testimonials";
-import Download from "pages/Presentation/sections/Download";
+import Counters from "../../pages/Presentation/sections/Counters";
+import Information from "../../pages/Presentation/sections/Information";
+import Testimonials from "../../pages/Presentation/sections/Testimonials";
+import Download from "../../pages/Presentation/sections/Download";
+import AppGallery from "../../pages/Presentation/sections/AppGallery";
+
 
 // Presentation page components
-import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 
 // Routes
-import routes from "routes";
-import footerRoutes from "footer.routes";
+import routes from "../../routes";
+import footerRoutes from "../../footer.routes";
 
 // Images
 import bgImage from "assets/images/plan.jpg";
+import check from "assets/images/cheque.png";
+import cross from "assets/images/cerrar.png";
+// import testimg from "assets/images/screanshots/test.jpg"
+import landingimg from "assets/images/screanshots/landing.png"
+import loginimg from "assets/images/screanshots/login.png"
+import registerimg from "assets/images/screanshots/registro.png"
+import plansimg from "assets/images/screanshots/planes.png"
+import planimg from "assets/images/screanshots/plan.png"
+
+
+
+import RotatingCard from "examples/Cards/RotatingCard";
+import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
+import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
+//import DefaultInfoCard from "examples/Cards/InfoCards/DefaultInfoCard";
+
+import bgFront from "assets/images/rotating-card-bg-front.jpeg";
+import bgBack from "assets/images/rotating-card-bg-back.jpeg";
+
+//Estas son las imagenes que apareceran en la seccion de capturas de la aplicacion
+const images = [
+  { url: landingimg, alt: 'Ventana de Landing de la aplicación' },
+  { url: loginimg, alt: 'Ventana del inicio de sesión de la aplicación' },
+  { url: registerimg, alt: 'Ventana del registro de la aplicación' },
+  { url: plansimg, alt: 'Ventana de inicio con los planes' },
+  { url: planimg, alt: 'Ventana de información de un plan' },
+  // { url: testimg, alt: 'Descripción de la imagen 6' },
+  // Agrega más imágenes según sea necesario
+];
+
 
 function Presentation() {
+  function createData(
+    name,//: string,
+    plani,//: boolean,
+    meetup,//: boolean,
+    geokeda,//: boolean,
+    looplan//: boolean,
+  ) {
+    return { name, plani, meetup, geokeda, looplan };
+  }
+
+  const rows = [
+    createData('Temática de planes ilimitada', true, true, false, true),
+    createData('Muestra planes según tus intereses', true, false, false, true),
+    createData('Valoración de los usuarios', true, false, false, false),
+    createData('Valoración de los planes', true, false, false, false),
+    createData('Planes privados para tus amigos', true, false, false, false),
+    createData('Chats con otros usuarios', true, false, false, true),
+    createData('Multiplataforma', true, true, false, false),
+    createData('Sin gastos integrados', true, false, true, false),
+  ];
+
   return (
     <>
       <DefaultNavbar
         routes={routes}
         action={{
           type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
+          route: "Descargar Plani",
+          label: "Descárgala gratis",
           color: "info",
         }}
         sticky
@@ -65,7 +125,8 @@ function Presentation() {
         sx={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "top",
+          backgroundPosition: "center 20%",
+          opacity: 0.75,
           display: "grid",
           placeItems: "center",
         }}
@@ -84,7 +145,7 @@ function Presentation() {
                 },
               })}
             >
-              Plani{" "}
+              Bienvenidx a Plani{" "}
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -92,8 +153,19 @@ function Presentation() {
               textAlign="center"
               px={{ xs: 6, lg: 12 }}
               mt={1}
+              style={{ fontWeight: 'bold' }}
             >
-              La mejor aplicación del mundo
+              ¿Estás listo para que te dejen plantado?🌱
+            </MKTypography>
+            <MKTypography
+              variant="body1"
+              color="black"
+              textAlign="center"
+              px={{ xs: 6, lg: 12 }}
+              mt={1}
+              style={{ marginTop: 30, fontSize: 15, fontWeight: 'bold' }}
+            >
+              Haz planes con tus amigos, conoce gente nueva, haz algo diferente🫂 Únete a Plani, harás esto y mucho más😎 Pero sobre todo... Que no te dejen plantado!🌳
             </MKTypography>
           </Grid>
         </Container>
@@ -111,12 +183,132 @@ function Presentation() {
       >
         <Counters />
         <Information />
-        <DesignBlocks />
-        <Pages />
-        <Container sx={{ mt: 6 }}>
-          <BuiltByDevelopers />
-        </Container>
+        <Divider sx={{ my: 6 }} />
         <Container>
+          {/* tabla comparativa */}
+          <Grid
+            container
+            item
+            xs={12}
+            lg={6}
+            justifyContent="center"
+            marginBottom={4}
+            sx={{ mx: "auto", textAlign: "center" }}
+          >
+            <MKTypography variant="h2">¿Por qué somos mejores?</MKTypography>
+          </Grid>
+          <TableContainer component={Paper}>
+            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+              <TableHead sx={{ display: "table-header-group" }}>
+                <TableRow>
+                  <TableCell></TableCell>
+                  <TableCell>Plani</TableCell>
+                  <TableCell>MeetUp</TableCell>
+                  <TableCell>Geokeda</TableCell>
+                  <TableCell>LOOPLAN</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {rows.map((row) => (
+                  <TableRow
+                    key={row.name}
+                    sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                  >
+                    <TableCell component="th" scope="row">
+                      {row.name}
+                    </TableCell>
+                    <TableCell>{row.plani ? <img src={check} alt="check" style={{ width: "30px", height: "30x" }}/> : <img src={cross} alt="cross" style={{ width: "25px", height: "25x" }}/>}</TableCell>
+                    <TableCell>{row.meetup ? <img src={check} alt="check" style={{ width: "30px", height: "30x" }}/> : <img src={cross} alt="cross" style={{ width: "25px", height: "25x" }}/>}</TableCell>
+                    <TableCell>{row.geokeda ? <img src={check} alt="check" style={{ width: "30px", height: "30x" }}/> : <img src={cross} alt="cross" style={{ width: "25px", height: "25x" }}/>}</TableCell>
+                    <TableCell>{row.looplan ? <img src={check} alt="check" style={{ width: "30px", height: "30x" }}/> : <img src={cross} alt="cross" style={{ width: "25px", height: "25x" }}/>}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </TableContainer>
+        </Container>
+        <Divider sx={{ my: 6 }} />
+        <Grid container item xs={11} spacing={3} alignItems="center" sx={{ mx: "auto" }}>
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
+            <RotatingCard>
+              <RotatingCardFront
+                image={bgFront}
+                icon="touch_app"
+                title={
+                  <>
+                    ¿Que te ha
+                    <br />
+                    parecido el plan?
+                  </>
+                }
+                description=""
+              />
+              <RotatingCardBack
+                image={bgBack}
+                title="¡Pon una valoracion al plan!"
+                description="Te ofrecemos la posibilidad de que valores los planes que has realizado y asi ayudar a otros usuarios a encontrar los mejores planes."
+                action={{
+                  type: "internal",
+                  route: "https://play.google.com/store/games?hl=es_419&gl=US",
+                  label: "¡Descarga ya!",
+                }}
+              />
+            </RotatingCard>
+          </Grid>
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
+            <RotatingCard>
+              <RotatingCardFront
+                image={bgFront}
+                icon="touch_app"
+                title={
+                  <>
+                    ¿Quieres decubrir
+                    <br />
+                    nuevas aficiones?
+                  </>
+                }
+                description="¡Dejanos recomendarte!"
+              />
+              <RotatingCardBack
+                image={bgBack}
+                title="¡Descubre!"
+                description="Gracias a nuestro algoritmo que analiza los planes y opiniones de otros usuarios, te mostramos aquellos planes que creemos que creemos que te pueden gustar."
+                action={{
+                  type: "internal",
+                  route: "https://play.google.com/store/games?hl=es_419&gl=US",
+                  label: "¡Descarga ya!",
+                }}
+              />
+            </RotatingCard>
+          </Grid>
+          <Grid item xs={12} lg={4} sx={{ mx: "auto" }}>
+            <RotatingCard>
+              <RotatingCardFront
+                image={bgFront}
+                icon="touch_app"
+                title={
+                  <>
+                    Tú eliges quién
+                    <br />
+                    puede unirse al plan
+                  </>
+                }
+                description=""
+              />
+              <RotatingCardBack
+                image={bgBack}
+                title="¡Tú eliges!"
+                description="Controla quién puede unirse al plan y quién no. Tú eres el dueño del plan y tú decides quién puede unirse y quién no."
+                action={{
+                  type: "internal",
+                  route: "https://play.google.com/store/games?hl=es_419&gl=US",
+                  label: "¡Descarga ya!",
+                }}
+              />
+            </RotatingCard>
+          </Grid>
+        </Grid>
+        {/* <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>
               <FilledInfoCard
@@ -159,18 +351,19 @@ function Presentation() {
               />
             </Grid>
           </Grid>
-        </Container>
+        </Container> */}
         <Testimonials />
+        <AppGallery images={images} />
         <Download />
         <MKBox pt={18} pb={6}>
           <Container>
             <Grid container spacing={3}>
               <Grid item xs={12} lg={5} ml="auto" sx={{ textAlign: { xs: "center", lg: "left" } }}>
                 <MKTypography variant="h4" fontWeight="bold" mb={0.5}>
-                  Thank you for your support!
+                  Gracias por tu apoyo!🧡
                 </MKTypography>
                 <MKTypography variant="body1" color="text">
-                  We deliver the best web products
+                  Estamos creando la mejor aplicación para ti
                 </MKTypography>
               </Grid>
               <Grid
@@ -183,7 +376,7 @@ function Presentation() {
               >
                 <MKSocialButton
                   component="a"
-                  href="https://twitter.com/intent/tweet?text=Check%20Material%20Design%20System%20made%20by%20%40CreativeTim%20%23webdesign%20%23designsystem%20%23mui5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-kit-react"
+                  href="https://twitter.com/intent/tweet?text=Conoce%20Plani%2C%20una%20aplicaci%C3%B3n%20para%20hacer%20planes%20distintos%20y%20conocer%20gente!%F0%9F%AB%82%20Hecha%20por%20%40plani%20%23redsocial%20%23amigos%20%23planes%20junto%20con%20la%20URL%20https%3A%2F%2Fplani-app.vercel.app%2F"
                   target="_blank"
                   color="twitter"
                   sx={{ mr: 1 }}
@@ -193,7 +386,7 @@ function Presentation() {
                 </MKSocialButton>
                 <MKSocialButton
                   component="a"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-kit-react"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://plani-app.vercel.app/"
                   target="_blank"
                   color="facebook"
                   sx={{ mr: 1 }}
@@ -203,7 +396,7 @@ function Presentation() {
                 </MKSocialButton>
                 <MKSocialButton
                   component="a"
-                  href="https://www.pinterest.com/pin/create/button/?url=https://www.creative-tim.com/product/material-kit-react"
+                  href="https://www.pinterest.com/pin/create/button/?url=https://plani-app.vercel.app/"
                   target="_blank"
                   color="pinterest"
                 >
