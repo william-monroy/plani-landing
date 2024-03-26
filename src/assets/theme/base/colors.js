@@ -212,8 +212,8 @@ export default {
     },
 
     info: {
-      background: "#aecef7",
-      text: "#095bc6",
+      background: "#FFA500",
+      text: "#ffa500",
     },
 
     success: {
@@ -245,7 +245,7 @@ export default {
   coloredShadows: {
     primary: "#e91e62",
     secondary: "#110e0e",
-    info: "#00bbd4",
+    info: "#FFA500",
     success: "#4caf4f",
     warning: "#ff9900",
     error: "#f44336",

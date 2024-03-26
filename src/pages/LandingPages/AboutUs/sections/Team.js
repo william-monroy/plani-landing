@@ -25,31 +25,33 @@ import MKTypography from "components/MKTypography";
 import HorizontalTeamCard from "examples/Cards/TeamCards/HorizontalTeamCard";
 
 // Images
-import team1 from "assets/images/team-5.jpg";
-import team2 from "assets/images/bruce-mars.jpg";
-import team3 from "assets/images/ivana-squares.jpg";
-import team4 from "assets/images/ivana-square.jpg";
+import team1 from "assets/images/Avatar_Andrea.jfif";
+import team2 from "assets/images/Avatar_William.jpg";
+import team3 from "assets/images/Avatar_Nico.jfif";
+import team4 from "assets/images/Avatar_Dennis.jfif";
+import team5 from "assets/images/Avatar_Asier.jfif";
+import team6 from "assets/images/Avatar_Fermin.jfif";
+
 
 function Team() {
   return (
-    <MKBox
+    <MKBox 
+      sx={{  background: 'linear-gradient(150deg, orange, yellow)' }}
       component="section"
       variant="gradient"
-      bgColor="dark"
       position="relative"
       py={6}
       px={{ xs: 2, lg: 0 }}
       mx={-2}
     >
-      <Container>
+      <Container >
         <Grid container>
           <Grid item xs={12} md={8} sx={{ mb: 6 }}>
             <MKTypography variant="h3" color="white">
-              The Executive Team
+              El equipo directivo
             </MKTypography>
             <MKTypography variant="body2" color="white" opacity={0.8}>
-              There&apos;s nothing I really wanted to do in life that I wasn&apos;t able to get good
-              at. That&apos;s my skill.
+              No hay nada que no podamos cultivar juntos.
             </MKTypography>
           </Grid>
         </Grid>
@@ -58,9 +60,9 @@ function Team() {
             <MKBox mb={1}>
               <HorizontalTeamCard
                 image={team1}
-                name="Emma Roberts"
-                position={{ color: "info", label: "UI Designer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                name="Andrea Morala Martinez"
+                position={{ color: "info", label: "Scrum master" }}
+                description="Exigente y Responsable. Dirige al equipo con rama de hierro y ningún problema balancea su tronco."
               />
             </MKBox>
           </Grid>
@@ -68,9 +70,9 @@ function Team() {
             <MKBox mb={1}>
               <HorizontalTeamCard
                 image={team2}
-                name="William Pearce"
-                position={{ color: "info", label: "Boss" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                name="William Frank Monroy Mamani"
+                position={{ color: "info", label: "Arquitecto de Software" }}
+                description="Se encarga de actualizar el proyecto con la última tecnología y seguridad. Se planta en contra de cualquier bicho."
               />
             </MKBox>
           </Grid>
@@ -78,9 +80,9 @@ function Team() {
             <MKBox mb={{ xs: 1, lg: 0 }}>
               <HorizontalTeamCard
                 image={team3}
-                name="Ivana Flow"
-                position={{ color: "info", label: "Athlete" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                name="Nicolas Arbunies Apesteguia"
+                position={{ color: "info", label: "Equipo de desarrollo" }}
+                description="Más duro que un roble. Centrado y motivado, aunque de vez en cuando se toma un descanso para hacer la fotosintesis."
               />
             </MKBox>
           </Grid>
@@ -88,9 +90,29 @@ function Team() {
             <MKBox mb={{ xs: 1, lg: 0 }}>
               <HorizontalTeamCard
                 image={team4}
-                name="Marquez Garcia"
-                position={{ color: "info", label: "JS Developer" }}
-                description="Artist is a term applied to a person who engages in an activity deemed to be an art."
+                name="Dennis Ayala Lauroba"
+                position={{ color: "info", label: "Equipo de desarrollo" }}
+                description="Podría decirse que es el segundo Scrum Master de nuestro pequeño jardín. Su codigo crece más rapido que cualquier enredadera"
+              />
+            </MKBox>
+          </Grid>
+          <Grid item xs={12} lg={6}>
+            <MKBox mb={{ xs: 1, lg: 0 }}>
+              <HorizontalTeamCard
+                image={team5}
+                name="Asier de la Nava Ortego"
+                position={{ color: "info", label: "Equipo de desarrollo" }}
+                description="Su algoritmo siempre está en verde. ¡Siempre en busca de una raíz de la solución!"
+              />
+            </MKBox>
+          </Grid>
+          <Grid item xs={12} lg={6}>
+            <MKBox mb={{ xs: 1, lg: 0 }}>
+              <HorizontalTeamCard
+                image={team6}
+                name="Fermín Zubiri Remírez"
+                position={{ color: "info", label: "Equipo de desarrollo" }}
+                description="Enraizado con el equipo hasta que caiga la ultima hoja"
               />
             </MKBox>
           </Grid>
