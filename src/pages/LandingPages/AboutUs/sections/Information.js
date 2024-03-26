@@ -17,6 +17,7 @@ Coded by www.creative-tim.com
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 
+
 // Material Kit 2 React components
 import MKBox from "components/MKBox";
 
@@ -46,7 +47,7 @@ function Information() {
               <Grid item xs={12} md={6}>
                 <MKBox mb={5}>
                   <DefaultInfoCard
-                    icon="DateRange"
+                    icon="calendar_today"
                     title="Día a día"
                     description="Todos las semanas hacemos una reunion para ver como mejorar la aplicación y que va a hacer cada uno "
                   />

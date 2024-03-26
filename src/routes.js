@@ -37,7 +37,8 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
-import Icon from "@mui/material/Icon";
+import Diversity1Icon from '@mui/icons-material/Diversity1';
+import CallIcon from '@mui/icons-material/Call';
 
 // @mui icons
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -45,49 +46,60 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 // Pages
 import AboutUs from "layouts/pages/landing-pages/about-us";
 import ContactUs from "layouts/pages/landing-pages/contact-us";
-import Author from "layouts/pages/landing-pages/author";
-import SignIn from "layouts/pages/authentication/sign-in";
+// import Author from "layouts/pages/landing-pages/author";
+// import SignIn from "layouts/pages/authentication/sign-in";
 
 
 const routes = [
   {
-    name: "pages",
-    icon: <Icon>dashboard</Icon>,
-    columns: 1,
-    rowsPerColumn: 2,
-    collapse: [
-      {
-        name: "landing pages",
-        collapse: [
-          {
-            name: "about us",
-            route: "/pages/landing-pages/about-us",
-            component: <AboutUs />,
-          },
-          {
-            name: "contact us",
-            route: "/pages/landing-pages/contact-us",
-            component: <ContactUs />,
-          },
-          {
-            name: "author",
-            route: "/pages/landing-pages/author",
-            component: <Author />,
-          },
-        ],
-      },
-      {
-        name: "account",
-        collapse: [
-          {
-            name: "sign in",
-            route: "/pages/authentication/sign-in",
-            component: <SignIn />,
-          },
-        ],
-      },
-    ],
+    name: "about us",
+    icon: <Diversity1Icon/>,
+    route: "/pages/landing-pages/about-us",
+    component: <AboutUs />,
   },
+  {
+    name: "contact us",
+    icon: <CallIcon />,
+    route: "/pages/landing-pages/contact-us",
+    component: <ContactUs />,
+  },
+    // name: "pages",
+    // icon: <Icon>dashboard</Icon>,
+    // columns: 1,
+    // rowsPerColumn: 2,
+    // collapse: [
+    //   {
+    //     name: "landing pages",
+    //     collapse: [
+    //       {
+    //         name: "about us",
+    //         route: "/pages/landing-pages/about-us",
+    //         component: <AboutUs />,
+    //       },
+    //       {
+    //         name: "contact us",
+    //         route: "/pages/landing-pages/contact-us",
+    //         component: <ContactUs />,
+    //       },
+    //       {
+    //         name: "author",
+    //         route: "/pages/landing-pages/author",
+    //         component: <Author />,
+    //       },
+    //     ],
+    //   },
+    //   {
+    //     name: "account",
+    //     collapse: [
+    //       {
+    //         name: "sign in",
+    //         route: "/pages/authentication/sign-in",
+    //         component: <SignIn />,
+    //       },
+    //     ],
+    //   },
+    // ],
+  // },
   {
     name: "github",
     icon: <GitHubIcon />,
